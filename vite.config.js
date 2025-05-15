@@ -12,4 +12,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  // Optional: Silence Sass deprecation warnings.
+  css: {
+    preprocessorOptions: {
+      scss: {
+        silenceDeprecations: ['import', 'color-functions', 'global-builtin'],
+      },
+    },
+  },
 });
