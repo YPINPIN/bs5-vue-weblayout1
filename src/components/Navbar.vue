@@ -27,7 +27,7 @@
             <a class="nav-link" href="#">我有個大膽的想法</a>
           </li>
         </ul>
-        <div class="navbar-btns row g-0">
+        <div class="navbar-btns row gx-3 my-2 my-md-0">
           <div class="d-grid d-md-inline-block col">
             <button class="btn btn-primary btn-login">登入</button>
           </div>
@@ -52,10 +52,7 @@
 .navbar-toggler:focus {
   box-shadow: none;
 }
-.btn-login {
-  min-width: g-fn.rem(96px);
-  margin-right: g-fn.rem(16px);
-}
+.btn-login,
 .btn-register {
   min-width: g-fn.rem(96px);
 }
