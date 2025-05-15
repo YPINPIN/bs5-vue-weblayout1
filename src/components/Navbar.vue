@@ -48,9 +48,12 @@
 .navbar-logo {
   width: g-fn.rem(111px);
 }
-
 .navbar-toggler:focus {
   box-shadow: none;
+}
+.navbar-toggler-icon {
+  width: g-fn.rem(32px);
+  height: g-fn.rem(32px);
 }
 .btn-login,
 .btn-register {
