@@ -1,0 +1,18 @@
+// change btn text color
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    color: $dark;
+  }
+}
+
+.btn-primary:hover {
+  color: $white;
+  background-color: $hover-color;
+  border-color: $hover-color;
+}
+
+.btn-outline-secondary:hover {
+  color: $secondary;
+  background-color: $primary;
+  border-color: $primary;
+}
