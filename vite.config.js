@@ -17,6 +17,9 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         silenceDeprecations: ['import', 'color-functions', 'global-builtin'],
+        additionalData: `
+          @use "@/assets/scss/global/g-fn.scss";
+        `,
       },
     },
   },
