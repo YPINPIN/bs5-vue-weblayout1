@@ -14,6 +14,15 @@ $btn-border-radius: $border-radius-pill;
 $btn-border-radius-sm: $border-radius-pill;
 $btn-border-radius-lg: $border-radius-pill;
 
+// Navbar
+// navbar-variables
+$navbar-nav-link-padding-x: g-fn.rem(24px);
+
+$navbar-brand-margin-end: g-fn.rem(24px);
+
+$navbar-light-color: $dark;
+$navbar-light-hover-color: $secondary;
+
 // custom color
 // hover
 $hover-color: #ff785e;

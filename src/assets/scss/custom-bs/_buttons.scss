@@ -11,8 +11,13 @@
   border-color: $hover-color;
 }
 
-.btn-outline-secondary:hover {
-  color: $secondary;
-  background-color: $primary;
-  border-color: $primary;
+.btn-outline-secondary {
+  border-width: 2px;
+  padding-top: calc(var(--#{$prefix}btn-padding-y) - 2px);
+  padding-bottom: calc(var(--#{$prefix}btn-padding-y) - 2px);
+  &:hover {
+    color: $secondary;
+    background-color: $primary;
+    border-color: $primary;
+  }
 }
