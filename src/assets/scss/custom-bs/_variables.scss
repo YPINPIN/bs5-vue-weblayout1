@@ -3,8 +3,22 @@ $primary: #ffdf65;
 $secondary: #858377;
 $dark: #636057;
 
+// custom colors
+// dark
+$dark2-color: #494846;
+// hover
+$hover-color: #ff785e;
+// input
+$input-bg-color: #f7f7f7;
+// for utilities
+$custom-colors: (
+  'hover': $hover-color,
+  'input-bg': $input-bg-color,
+  'dark2': $dark2-color,
+);
+
 // Body
-$body-color: #494846;
+$body-color: $dark2-color;
 
 // Grid containers
 $container-max-widths: (
@@ -25,6 +39,12 @@ $btn-border-radius: $border-radius-pill;
 $btn-border-radius-sm: $border-radius-pill;
 $btn-border-radius-lg: $border-radius-pill;
 
+// Forms
+$input-bg: $input-bg-color;
+$input-border-color: $input-bg-color;
+$input-focus-border-color: $input-bg-color;
+$input-focus-box-shadow: none;
+
 // Navbar
 // navbar-variables
 $navbar-nav-link-padding-x: g-fn.rem(24px);
@@ -34,10 +54,7 @@ $navbar-brand-margin-end: g-fn.rem(24px);
 $navbar-light-color: $dark;
 $navbar-light-hover-color: $secondary;
 
-// custom color
-// hover
-$hover-color: #ff785e;
-
+// custom
 // font-family
 $font-family-tc: 'Noto Sans TC', sans-serif;
 $font-family-num: 'Baloo Tamma 2', 'Noto Sans TC', sans-serif;

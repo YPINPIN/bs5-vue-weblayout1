@@ -11,5 +11,10 @@ $utilities: map-merge(
       class: c-fs,
       values: $custom-font-sizes,
     ),
+    'custom-color': (
+      property: color,
+      class: c-text,
+      values: $custom-colors,
+    ),
   )
 );

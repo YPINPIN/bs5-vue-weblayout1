@@ -1,3 +1,7 @@
+<script setup>
+import LoginModal from './LoginModal.vue';
+</script>
+
 <template>
   <nav class="navbar navbar-expand-md border-bottom border-5 border-primary">
     <div class="container-md">
@@ -29,7 +33,13 @@
         </ul>
         <div class="navbar-btns row gx-3 my-2 my-md-0">
           <div class="d-grid d-md-inline-block col">
-            <button class="btn btn-primary btn-login">登入</button>
+            <button
+              class="btn btn-primary btn-login"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              登入
+            </button>
           </div>
           <div class="d-grid d-md-inline-block col">
             <button class="btn btn-outline-secondary btn-register">註冊</button>
@@ -38,6 +48,10 @@
       </div>
     </div>
   </nav>
+  <!-- Modal -->
+  <Teleport to="body">
+    <LoginModal />
+  </Teleport>
 </template>
 
 <style lang="scss" scoped>
