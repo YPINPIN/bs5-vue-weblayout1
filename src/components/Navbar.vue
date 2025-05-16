@@ -5,7 +5,7 @@
         <img src="../assets/images/logo.jpg" class="navbar-logo" alt="logo" />
       </a>
       <button
-        class="navbar-toggler border-0 text-secondary"
+        class="navbar-toggler border-0 p-0 text-secondary"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarNav"
