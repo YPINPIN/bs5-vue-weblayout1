@@ -1,0 +1,15 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    'custom-font-family': (
+      property: font-family,
+      class: c-fn,
+      values: $custom-font-family,
+    ),
+    'custom-font-size': (
+      property: font-size,
+      class: c-fs,
+      values: $custom-font-sizes,
+    ),
+  )
+);

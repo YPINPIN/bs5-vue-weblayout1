@@ -58,8 +58,18 @@
 // Helpers
 @import 'bootstrap/scss/helpers';
 
+// custom utilities
+@import './custom-bs/utilities';
+
 // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import 'bootstrap/scss/utilities/api';
 
 // 8. Add additional custom code here
+// google fonts
+@import './google-fonts';
+
+// custom
 @import './custom-bs/buttons';
+
+// base
+@import './base';

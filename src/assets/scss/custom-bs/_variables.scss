@@ -6,6 +6,8 @@ $dark: #636057;
 // Body
 $body-color: #494846;
 
+// Components
+//
 // border-radius-variables
 $border-radius-pill: 50rem !default;
 
@@ -26,3 +28,23 @@ $navbar-light-hover-color: $secondary;
 // custom color
 // hover
 $hover-color: #ff785e;
+
+// font-family
+$font-family-tc: 'Noto Sans TC', sans-serif;
+$font-family-num: 'Baloo Tamma 2', 'Noto Sans TC', sans-serif;
+
+$custom-font-family: (
+  tc: $font-family-tc,
+  num: $font-family-num,
+);
+
+// font-size
+$custom-font-sizes: (
+  12: g-fn.rem(12px),
+  14: g-fn.rem(14px),
+  16: g-fn.rem(16px),
+  18: g-fn.rem(18px),
+  20: g-fn.rem(20px),
+  24: g-fn.rem(24px),
+  32: g-fn.rem(32px),
+);
