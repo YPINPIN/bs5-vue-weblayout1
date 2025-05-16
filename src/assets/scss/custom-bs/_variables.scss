@@ -6,6 +6,15 @@ $dark: #636057;
 // Body
 $body-color: #494846;
 
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1140px,
+) !default;
+
 // Components
 //
 // border-radius-variables
