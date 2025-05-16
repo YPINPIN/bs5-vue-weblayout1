@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-border">
+  <nav class="navbar navbar-expand-md border-bottom border-5 border-primary">
     <div class="container-md">
       <a class="navbar-brand" href="#">
         <img src="../assets/images/logo.jpg" class="navbar-logo" alt="logo" />
@@ -41,19 +41,17 @@
 </template>
 
 <style lang="scss" scoped>
-.navbar-border {
-  border: 1px solid #e8e8db;
-  border-bottom: 5px solid var(--bs-primary);
-}
 .navbar-logo {
   width: g-fn.rem(111px);
 }
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-.navbar-toggler-icon {
-  width: g-fn.rem(32px);
-  height: g-fn.rem(32px);
+.navbar-toggler {
+  &:focus {
+    box-shadow: none;
+  }
+  &-icon {
+    width: g-fn.rem(32px);
+    height: g-fn.rem(32px);
+  }
 }
 .btn-login,
 .btn-register {
