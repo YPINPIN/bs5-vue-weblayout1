@@ -10,11 +10,17 @@ $dark2-color: #494846;
 $hover-color: #ff785e;
 // input
 $input-bg-color: #f7f7f7;
+// product
+$product-bg-color: #f8f9fa;
+
 // for utilities
 $custom-colors: (
   'hover': $hover-color,
-  'input-bg': $input-bg-color,
   'dark2': $dark2-color,
+);
+$custom-bg-colors: (
+  'input': $input-bg-color,
+  'product': $product-bg-color,
 );
 
 // Body
@@ -35,6 +41,7 @@ $container-max-widths: (
 $border-radius-pill: 50rem !default;
 
 // Buttons
+$btn-font-weight: 700;
 $btn-border-radius: $border-radius-pill;
 $btn-border-radius-sm: $border-radius-pill;
 $btn-border-radius-lg: $border-radius-pill;
@@ -48,11 +55,17 @@ $input-focus-box-shadow: none;
 // Navbar
 // navbar-variables
 $navbar-nav-link-padding-x: g-fn.rem(24px);
-
 $navbar-brand-margin-end: g-fn.rem(24px);
 
 $navbar-light-color: $dark;
 $navbar-light-hover-color: $secondary;
+
+// Badges
+// badge-variables
+$badge-font-size: g-fn.rem(12px);
+$badge-padding-y: g-fn.rem(5px);
+$badge-padding-x: g-fn.rem(16px);
+$badge-border-radius: g-fn.rem(4px);
 
 // custom
 // font-family

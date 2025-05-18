@@ -19,6 +19,17 @@
     color: $secondary;
     background-color: $primary;
     border-color: $primary;
+
+    svg {
+      fill: $hover-color;
+    }
+  }
+
+  svg {
+    width: g-fn.rem(20px);
+    height: g-fn.rem(20px);
+    margin-right: g-fn.rem(8px);
+    fill: $secondary;
   }
 }
 
@@ -26,5 +37,25 @@
   opacity: 0.2;
   &:focus {
     box-shadow: none;
+  }
+}
+
+.btn-lg {
+  --top: 8px;
+  --bottom: 8px;
+  &.btn-primary {
+    padding-top: var(--top);
+    padding-bottom: var(--bottom);
+  }
+  &.btn-outline-secondary {
+    padding-top: calc(var(--top) - 1px);
+    padding-bottom: calc(var(--bottom) - 1px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .btn-lg {
+    --top: 10px;
+    --bottom: 10px;
   }
 }

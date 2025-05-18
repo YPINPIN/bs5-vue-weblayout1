@@ -7,6 +7,7 @@ $utilities: map-merge(
       values: $custom-font-family,
     ),
     'custom-font-size': (
+      responsive: true,
       property: font-size,
       class: c-fs,
       values: $custom-font-sizes,
@@ -15,6 +16,11 @@ $utilities: map-merge(
       property: color,
       class: c-text,
       values: $custom-colors,
+    ),
+    'custom-background-color': (
+      property: background-color,
+      class: c-bg,
+      values: $custom-bg-colors,
     ),
   )
 );
