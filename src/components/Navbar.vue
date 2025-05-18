@@ -8,7 +8,7 @@ import LoginModal from './LoginModal.vue';
   >
     <div class="container-md">
       <a class="navbar-brand" href="#">
-        <img src="../assets/images/logo.jpg" class="navbar-logo" alt="logo" />
+        <img src="@/assets/images/logo.jpg" class="navbar-logo" alt="logo" />
       </a>
       <button
         class="navbar-toggler border-0 p-0 text-secondary"
