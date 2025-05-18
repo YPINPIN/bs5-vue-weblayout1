@@ -3,7 +3,9 @@ import LoginModal from './LoginModal.vue';
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-md border-bottom border-5 border-primary">
+  <nav
+    class="navbar navbar-expand-md border-bottom border-5 border-primary py-1 py-md-2"
+  >
     <div class="container-md">
       <a class="navbar-brand" href="#">
         <img src="../assets/images/logo.jpg" class="navbar-logo" alt="logo" />
