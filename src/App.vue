@@ -3,6 +3,7 @@ import Navbar from './components/Navbar.vue';
 import Product from './components/Product.vue';
 import ProductInfo from './components/ProductInfo.vue';
 import ProductStore from './components/ProductStore.vue';
+import ProductPlan from './components/ProductPlan.vue';
 </script>
 
 <template>
@@ -108,7 +109,7 @@ import ProductStore from './components/ProductStore.vue';
           <div class="col-12 col-lg-4">
             <div class="right-side">
               <ProductStore />
-              <div class="py-3">test2</div>
+              <ProductPlan />
             </div>
           </div>
         </div>
