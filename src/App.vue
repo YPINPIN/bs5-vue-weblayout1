@@ -2,6 +2,7 @@
 import Navbar from './components/Navbar.vue';
 import Product from './components/Product.vue';
 import ProductInfo from './components/ProductInfo.vue';
+import ProductStore from './components/ProductStore.vue';
 </script>
 
 <template>
@@ -104,7 +105,12 @@ import ProductInfo from './components/ProductInfo.vue';
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-4">test</div>
+          <div class="col-12 col-lg-4">
+            <div class="right-side">
+              <ProductStore />
+              <div class="py-3">test2</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -53,6 +53,19 @@
   }
 }
 
+.btn-sm {
+  &.btn-outline-secondary {
+    border-width: 1px;
+    padding: g-fn.rem(6px) g-fn.rem(14px);
+    svg {
+      width: g-fn.rem(14px);
+      height: g-fn.rem(13px);
+      margin-top: g-fn.rem(3px);
+      margin-right: g-fn.rem(5px);
+    }
+  }
+}
+
 @media screen and (min-width: 992px) {
   .btn-lg {
     --top: 10px;
