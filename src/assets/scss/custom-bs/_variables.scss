@@ -67,6 +67,17 @@ $badge-padding-y: g-fn.rem(5px);
 $badge-padding-x: g-fn.rem(16px);
 $badge-border-radius: g-fn.rem(4px);
 
+// Tooltips
+// tooltip-variables
+$tooltip-color: $primary;
+$tooltip-bg: $dark2-color;
+$tooltip-border-radius: g-fn.rem(4px);
+$tooltip-opacity: 1;
+$tooltip-padding-y: g-fn.rem(4px);
+$tooltip-padding-x: g-fn.rem(12px);
+$tooltip-arrow-width: g-fn.rem(8px);
+$tooltip-arrow-height: g-fn.rem(6px);
+
 // custom
 // font-family
 $font-family-tc: 'Noto Sans TC', sans-serif;

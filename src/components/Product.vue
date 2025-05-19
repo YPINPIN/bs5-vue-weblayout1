@@ -83,6 +83,7 @@ const iconData = {
                     data-bs-toggle="tooltip"
                     data-bs-placement="top"
                     :data-bs-title="title"
+                    data-bs-offset="0,11"
                     class="me-2 me-md-3 me-lg-0"
                   />
                 </div>
