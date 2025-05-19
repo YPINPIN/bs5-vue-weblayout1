@@ -52,6 +52,11 @@ $input-border-color: $input-bg-color;
 $input-focus-border-color: $input-bg-color;
 $input-focus-box-shadow: none;
 
+// Navs
+// nav-variables
+$nav-underline-gap: 0px;
+$nav-underline-link-active-color: $dark;
+
 // Navbar
 // navbar-variables
 $navbar-nav-link-padding-x: g-fn.rem(24px);

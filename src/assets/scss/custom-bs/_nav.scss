@@ -1,0 +1,31 @@
+//
+// Underline
+//
+
+.nav-underline {
+  .nav-link {
+    padding: g-fn.rem(16px);
+
+    letter-spacing: 2px;
+    color: $dark;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: $primary;
+    }
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    border-bottom-color: $primary;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .nav-underline {
+    .nav-link {
+      padding: g-fn.rem(22px) g-fn.rem(12px);
+      letter-spacing: 2px;
+    }
+  }
+}
