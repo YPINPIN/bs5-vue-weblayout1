@@ -1,6 +1,7 @@
 <script setup>
 import Navbar from './components/Navbar.vue';
 import Product from './components/Product.vue';
+import ProductInfo from './components/ProductInfo.vue';
 </script>
 
 <template>
@@ -62,39 +63,48 @@ import Product from './components/Product.vue';
       </div>
 
       <div class="container-md">
-        <div class="tab-content" id="myTabContent" style="min-height: 500px">
-          <div
-            class="tab-pane fade show active"
-            id="info-tab-pane"
-            role="tabpanel"
-            tabindex="0"
-          >
-            info-tab-pane...
+        <div class="row gx-3 gx-lg-5">
+          <div class="col-12 col-lg-8">
+            <div
+              class="tab-content"
+              id="myTabContent"
+              style="min-height: 500px"
+            >
+              <div
+                class="tab-pane fade show active"
+                id="info-tab-pane"
+                role="tabpanel"
+                tabindex="0"
+              >
+                <ProductInfo />
+              </div>
+              <div
+                class="tab-pane fade"
+                id="faq-tab-pane"
+                role="tabpanel"
+                tabindex="0"
+              >
+                faq-tab-pane...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="process-tab-pane"
+                role="tabpanel"
+                tabindex="0"
+              >
+                process-tab-pane...
+              </div>
+              <div
+                class="tab-pane fade"
+                id="comment-tab-pane"
+                role="tabpanel"
+                tabindex="0"
+              >
+                comment-tab-pane...
+              </div>
+            </div>
           </div>
-          <div
-            class="tab-pane fade"
-            id="faq-tab-pane"
-            role="tabpanel"
-            tabindex="0"
-          >
-            faq-tab-pane...
-          </div>
-          <div
-            class="tab-pane fade"
-            id="process-tab-pane"
-            role="tabpanel"
-            tabindex="0"
-          >
-            process-tab-pane...
-          </div>
-          <div
-            class="tab-pane fade"
-            id="comment-tab-pane"
-            role="tabpanel"
-            tabindex="0"
-          >
-            comment-tab-pane...
-          </div>
+          <div class="col-12 col-lg-4">test</div>
         </div>
       </div>
     </section>
