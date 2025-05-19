@@ -32,7 +32,7 @@ const getImageUrl = (name) => {
 <style lang="scss" scoped>
 .title {
   padding-left: 14px;
-  letter-spacing: 1.6px;
+  letter-spacing: g-fn.rem(1.6px);
 }
 .description {
   text-align: justify;
@@ -40,7 +40,7 @@ const getImageUrl = (name) => {
 
 @media screen and (min-width: 768px) {
   .title {
-    letter-spacing: 1.92px;
+    letter-spacing: g-fn.rem(1.92px);
   }
 }
 </style>

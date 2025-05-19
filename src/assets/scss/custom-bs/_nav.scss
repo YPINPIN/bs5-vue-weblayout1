@@ -6,7 +6,7 @@
   .nav-link {
     padding: g-fn.rem(16px);
 
-    letter-spacing: 2px;
+    letter-spacing: g-fn.rem(2px);
     color: $dark;
 
     &:hover,
@@ -25,7 +25,7 @@
   .nav-underline {
     .nav-link {
       padding: g-fn.rem(22px) g-fn.rem(12px);
-      letter-spacing: 2px;
+      letter-spacing: g-fn.rem(2px);
     }
   }
 }
