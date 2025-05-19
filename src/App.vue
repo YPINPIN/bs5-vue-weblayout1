@@ -9,7 +9,7 @@ import ProductInfo from './components/ProductInfo.vue';
   <main>
     <Product />
     <section>
-      <div class="tab-wrapper">
+      <div class="tab-wrapper bg-white sticky-top">
         <div class="container-md gx-0 gx-sm-4">
           <ul
             class="nav nav-underline c-fs-14 c-fs-md-16 justify-content-between justify-content-sm-start"
