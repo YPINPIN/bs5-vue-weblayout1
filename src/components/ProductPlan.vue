@@ -1,3 +1,50 @@
+<script setup>
+import dayjs from 'dayjs';
+import PlanItem from './PlanItem.vue';
+
+// create fake endTime
+function setEndTime(endDays = 1) {
+  let date = dayjs().add(endDays, 'day').toDate();
+  return date;
+}
+
+const planData = [
+  {
+    id: 1,
+    picture: 'plan_img',
+    title: '買一送一，只有兩百組別錯過',
+    description:
+      '受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。',
+    price: 1600,
+    buyCount: 88,
+    limitCount: 200,
+    endTime: setEndTime(2),
+  },
+  {
+    id: 2,
+    picture: 'plan_img',
+    title: '買一送二，只有一百組別錯過',
+    description:
+      '受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。',
+    price: 1200,
+    buyCount: 65,
+    limitCount: 100,
+    endTime: setEndTime(1),
+  },
+  {
+    id: 3,
+    picture: 'plan_img',
+    title: '買一送三，只有五十組別錯過',
+    description:
+      '受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。',
+    price: 1000,
+    buyCount: 45,
+    limitCount: 50,
+    endTime: setEndTime(1),
+  },
+];
+</script>
+
 <template>
   <div class="py-3">
     <div
@@ -5,9 +52,10 @@
     >
       選擇一個方案來支持
     </div>
-    <div>test</div>
+    <PlanItem v-for="data in planData" :key="data.id" v-bind="data" />
   </div>
 </template>
+
 <style lang="scss" scoped>
 .plan-header {
   letter-spacing: g-fn.rem(2px);

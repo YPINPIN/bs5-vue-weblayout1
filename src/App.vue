@@ -65,7 +65,7 @@ import ProductPlan from './components/ProductPlan.vue';
       </div>
 
       <div class="container-md">
-        <div class="row gx-3 gx-lg-5">
+        <div class="row gx-3 gx-lg-4 gx-xl-5">
           <div class="col-12 col-lg-8">
             <div
               class="tab-content"
