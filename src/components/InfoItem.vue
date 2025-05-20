@@ -13,7 +13,7 @@ const getImageUrl = (name) => {
 <template>
   <div class="my-3 my-lg-4">
     <img
-      class="img-fluid mb-3 mb-lg-4"
+      class="img-fluid rounded-5 mb-3 mb-lg-4"
       :src="getImageUrl(picture)"
       :alt="`info-${picture}`"
     />

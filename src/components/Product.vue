@@ -36,7 +36,7 @@ const iconData = {
         <div class="row">
           <div class="col-12 col-lg-7">
             <img
-              class="img-fluid"
+              class="img-fluid rounded-5"
               src="@/assets/images/product_image.jpg"
               alt="product_image"
             />
