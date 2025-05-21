@@ -88,6 +88,30 @@ $tooltip-arrow-height: g-fn.rem(6px);
 $card-border-color: #e8e8db;
 $card-border-radius: g-fn.rem(8px);
 
+// Accordion
+// accordion-variables
+$accordion-color: $secondary;
+$accordion-bg: #fff;
+
+$accordion-border-color: #e5e5e5;
+$accordion-border-radius: g-fn.rem(4px);
+
+$accordion-body-padding-y: g-fn.rem(16px);
+$accordion-body-padding-x: g-fn.rem(16px);
+
+$accordion-button-padding-y: g-fn.rem(12px);
+$accordion-button-padding-x: g-fn.rem(20px);
+$accordion-button-color: $dark2-color;
+$accordion-button-bg: #fff;
+$accordion-button-active-color: $accordion-button-color;
+$accordion-button-active-bg: $accordion-button-bg;
+
+$accordion-icon-width: 1.25rem !default;
+$accordion-icon-color: $dark2-color;
+$accordion-icon-active-color: #53524f;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='#{$accordion-icon-color}' stroke-width='1.6'><path d='m5 7 L10 12 L15 7'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='#{$accordion-icon-active-color}' stroke-width='1.6'><path d='m5 7 L10 12 L15 7'/></svg>");
+
 // custom
 // font-family
 $font-family-tc: 'Noto Sans TC', sans-serif;
