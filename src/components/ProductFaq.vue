@@ -1,4 +1,6 @@
 <script setup>
+import FaqItem from './FaqItem.vue';
+
 const faqData = [
   {
     id: 1,
@@ -47,64 +49,8 @@ const faqData = [
         :key="faq.id"
         :class="['col-12', { 'mb-3': index != faqData.length - 1 }]"
       >
-        <div class="accordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button
-                :class="['accordion-button', { collapsed: index !== 0 }]"
-                type="button"
-                data-bs-toggle="collapse"
-                :data-bs-target="`#faq-collapse-${faq.id}`"
-              >
-                <span
-                  class="faq-header-icon bg-primary rounded-1 me-3 d-flex justify-content-center align-items-center fw-bold text-dark c-fs-14 c-fn-num"
-                >
-                  Q{{ faq.id }}
-                </span>
-                <span class="c-fs-16 c-fs-lg-14 faq-title">{{
-                  faq.title
-                }}</span>
-              </button>
-            </h2>
-            <div
-              :id="`faq-collapse-${faq.id}`"
-              :class="['accordion-collapse', 'collapse', { show: index === 0 }]"
-            >
-              <div
-                class="accordion-body c-fs-16 c-fs-lg-14 text-secondary faq-desc"
-              >
-                {{ faq.description }}
-              </div>
-            </div>
-          </div>
-        </div>
+        <FaqItem v-bind="faq" :is-show="index === 0" />
       </div>
     </div>
   </div>
 </template>
-
-<style lang="scss">
-.faq-header-icon {
-  width: g-fn.rem(28px);
-  height: g-fn.rem(28px);
-  letter-spacing: 0.7px;
-  line-height: g-fn.rem(24px);
-}
-.faq-title {
-  letter-spacing: 0.8px;
-}
-.faq-desc {
-  letter-spacing: g-fn.rem(0.8px);
-  line-height: g-fn.rem(27px);
-}
-
-@media screen and (min-width: 992px) {
-  .faq-title {
-    letter-spacing: 0.7px;
-  }
-  .faq-desc {
-    padding-left: g-fn.rem(64px);
-    letter-spacing: g-fn.rem(0.7px);
-  }
-}
-</style>
