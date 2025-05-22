@@ -5,6 +5,7 @@ import ProductProcess from './ProductProcess.vue';
 import ProductComment from './ProductComment.vue';
 import ProductStore from './ProductStore.vue';
 import ProductPlan from './ProductPlan.vue';
+import ProductForm from './ProductForm.vue';
 import { ref, onMounted } from 'vue';
 
 const tabData = [
@@ -96,12 +97,18 @@ onMounted(() => {
               <component :is="tab.component"></component>
             </div>
           </div>
+          <div class="d-none d-lg-block">
+            <ProductForm />
+          </div>
         </div>
         <div class="col-12 col-lg-4">
           <div class="right-side">
             <ProductStore />
             <ProductPlan />
           </div>
+        </div>
+        <div class="col-12 d-lg-none">
+          <ProductForm />
         </div>
       </div>
     </div>
