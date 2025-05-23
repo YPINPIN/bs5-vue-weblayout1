@@ -38,6 +38,14 @@ const contents = ref(null);
 // 根據視窗大小決定表單顯示位置
 const { width } = useWindowSize();
 const isLg = computed(() => width.value >= 992);
+// 紀錄表單資料狀態
+const formData = ref({
+  plan: '',
+  name: '',
+  phone: '',
+  email: '',
+  pay: 'card',
+});
 
 onMounted(() => {
   // 控制切換 tab 時，滾動到最上方
@@ -102,7 +110,13 @@ onMounted(() => {
             </div>
           </div>
           <div v-if="isLg" class="d-none d-lg-block">
-            <ProductForm />
+            <ProductForm
+              v-model:plan="formData.plan"
+              v-model:name="formData.name"
+              v-model:phone="formData.phone"
+              v-model:email="formData.email"
+              v-model:pay="formData.pay"
+            />
           </div>
         </div>
         <div class="col-12 col-lg-4">
@@ -112,7 +126,13 @@ onMounted(() => {
           </div>
         </div>
         <div v-if="!isLg" class="col-12 d-lg-none">
-          <ProductForm />
+          <ProductForm
+            v-model:plan="formData.plan"
+            v-model:name="formData.name"
+            v-model:phone="formData.phone"
+            v-model:email="formData.email"
+            v-model:pay="formData.pay"
+          />
         </div>
       </div>
     </div>

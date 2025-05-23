@@ -1,5 +1,31 @@
+<script setup>
+import { onMounted, ref } from 'vue';
+const plan = defineModel('plan');
+const name = defineModel('name');
+const phone = defineModel('phone');
+const email = defineModel('email');
+const pay = defineModel('pay');
+
+const form = ref(null);
+
+onMounted(() => {
+  form.value.addEventListener(
+    'submit',
+    (event) => {
+      if (!form.value.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      form.value.classList.add('was-validated');
+    },
+    false
+  );
+});
+</script>
+
 <template>
-  <div>
+  <div id="product-form">
     <div class="mb-2 mb-sm-1 text-center">
       <img src="../assets/icons/icon_heart.svg" alt="icon_heart" />
     </div>
@@ -18,27 +44,36 @@
         >
       </div>
     </div>
-    <form action="/">
+    <form ref="form" class="needs-validation" novalidate>
       <div class="mb-3">
         <label for="plan" class="form-label c-fs-14 c-fs-sm-16">贊助方案</label>
-        <select class="form-select" id="plan">
-          <option selected>請選擇一個方案</option>
+        <select v-model="plan" class="form-select" id="plan" required>
+          <option selected disabled value="">請選擇一個方案</option>
           <option value="1">方案一</option>
           <option value="2">方案二</option>
           <option value="3">方案三</option>
         </select>
+        <div class="invalid-feedback">請選擇一個贊助方案</div>
       </div>
       <div class="mb-3">
         <label for="name" class="form-label c-fs-14 c-fs-sm-16"
           >收件人姓名</label
         >
-        <input type="text" class="form-control rounded-1" id="name" />
+        <input
+          v-model="name"
+          type="text"
+          class="form-control rounded-1"
+          id="name"
+          required
+        />
+        <div class="invalid-feedback">收件人姓名不可為空</div>
       </div>
       <div class="mb-3">
         <label for="phone" class="form-label c-fs-14 c-fs-sm-16"
           >連絡電話</label
         >
         <input
+          v-model="phone"
           type="tel"
           id="phone"
           pattern="09[0-9]{8}"
@@ -46,16 +81,24 @@
           class="form-control rounded-1"
           required
         />
+        <div class="invalid-feedback">請輸入正確的電話格式</div>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label c-fs-14 c-fs-sm-16"
           >聯絡信箱</label
         >
-        <input type="email" class="form-control rounded-1" id="email" />
+        <input
+          v-model="email"
+          type="email"
+          class="form-control rounded-1"
+          id="email"
+          required
+        />
+        <div class="invalid-feedback">請輸入正確的信箱格式</div>
       </div>
       <div class="mb-3">
         <label for="pay" class="form-label c-fs-14 c-fs-sm-16">付款方式</label>
-        <select class="form-select" id="pay">
+        <select v-model="pay" class="form-select" id="pay" required>
           <option value="card" selected>信用卡付款</option>
           <option value="shop">超商付款</option>
           <option value="atm">ATM轉帳</option>

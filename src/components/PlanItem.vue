@@ -95,7 +95,9 @@ setCountdown();
       <p class="card-text mt-2 text-secondary plan-desc">
         {{ description }}
       </p>
-      <a href="#" class="btn btn-primary w-100 py-2 plan-link">贊助此專案</a>
+      <a href="#product-form" class="btn btn-primary w-100 py-2 plan-link"
+        >贊助此專案</a
+      >
     </div>
   </div>
 </template>
