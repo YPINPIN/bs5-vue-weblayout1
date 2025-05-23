@@ -22,7 +22,7 @@ import ProductContent from './components/ProductContent.vue';
 <style lang="scss">
 footer {
   height: g-fn.rem(54px);
-  letter-spacing: 0.18px;
+  letter-spacing: g-fn.rem(0.18px);
 }
 
 @media screen and (min-width: 768px) {
