@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { inject, ref } from 'vue';
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
 dayjs.extend(duration);
@@ -23,6 +23,12 @@ const {
   limitCount: Number,
   endTime: Date,
 });
+
+const selectPlan = inject('selectPlan');
+// 選擇贊助專案
+const handleClick = () => {
+  selectPlan(id);
+};
 
 const limitTimeStr = ref('');
 
@@ -95,7 +101,10 @@ setCountdown();
       <p class="card-text mt-2 text-secondary plan-desc">
         {{ description }}
       </p>
-      <a href="#product-form" class="btn btn-primary w-100 py-2 plan-link"
+      <a
+        href="#product-form"
+        @click="handleClick"
+        class="btn btn-primary w-100 py-2 plan-link"
         >贊助此專案</a
       >
     </div>

@@ -6,7 +6,8 @@ import ProductComment from './ProductComment.vue';
 import ProductStore from './ProductStore.vue';
 import ProductPlan from './ProductPlan.vue';
 import ProductForm from './ProductForm.vue';
-import { ref, onMounted, computed } from 'vue';
+import dayjs from 'dayjs';
+import { ref, onMounted, computed, provide } from 'vue';
 import { useWindowSize } from '@vueuse/core';
 
 const tabData = [
@@ -32,6 +33,48 @@ const tabData = [
   },
 ];
 
+// create fake endTime
+function setEndTime(endDays = 1) {
+  let date = dayjs().add(endDays, 'day').toDate();
+  return date;
+}
+
+const planData = [
+  {
+    id: 1,
+    picture: 'plan_img',
+    title: '買一送一，只有兩百組別錯過',
+    description:
+      '受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。',
+    price: 1600,
+    buyCount: 88,
+    limitCount: 200,
+    endTime: setEndTime(2),
+  },
+  {
+    id: 2,
+    picture: 'plan_img',
+    title: '買一送二，只有一百組別錯過',
+    description:
+      '受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。',
+    price: 1200,
+    buyCount: 65,
+    limitCount: 100,
+    endTime: setEndTime(1),
+  },
+  {
+    id: 3,
+    picture: 'plan_img',
+    title: '買一送三，只有五十組別錯過',
+    description:
+      '受就相法大夠局來畫師我只這然以放灣得的後人心年我物我年，或人有動與次出女親構算帶年行著所間女。',
+    price: 1000,
+    buyCount: 45,
+    limitCount: 50,
+    endTime: setEndTime(1),
+  },
+];
+
 // 獲取 tab 及 content 的 DOM 元素
 const tabs = ref(null);
 const contents = ref(null);
@@ -46,6 +89,12 @@ const formData = ref({
   email: '',
   pay: 'card',
 });
+// 提供選擇專案 function 給後代組件使用
+const selectPlan = (planId) => {
+  // console.log('selectPlan: ', planId);
+  formData.value.plan = planId;
+};
+provide('selectPlan', selectPlan);
 
 onMounted(() => {
   // 控制切換 tab 時，滾動到最上方
@@ -111,6 +160,7 @@ onMounted(() => {
           </div>
           <div v-if="isLg" class="d-none d-lg-block">
             <ProductForm
+              :plan-data="planData"
               v-model:plan="formData.plan"
               v-model:name="formData.name"
               v-model:phone="formData.phone"
@@ -122,11 +172,12 @@ onMounted(() => {
         <div class="col-12 col-lg-4">
           <div class="right-side">
             <ProductStore />
-            <ProductPlan />
+            <ProductPlan :plan-data="planData" />
           </div>
         </div>
         <div v-if="!isLg" class="col-12 d-lg-none">
           <ProductForm
+            :plan-data="planData"
             v-model:plan="formData.plan"
             v-model:name="formData.name"
             v-model:phone="formData.phone"

@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
+const { planData } = defineProps(['planData']);
 const plan = defineModel('plan');
 const name = defineModel('name');
 const phone = defineModel('phone');
@@ -49,9 +50,9 @@ onMounted(() => {
         <label for="plan" class="form-label c-fs-14 c-fs-sm-16">贊助方案</label>
         <select v-model="plan" class="form-select" id="plan" required>
           <option selected disabled value="">請選擇一個方案</option>
-          <option value="1">方案一</option>
-          <option value="2">方案二</option>
-          <option value="3">方案三</option>
+          <option v-for="data in planData" :key="data.id" :value="data.id">
+            NT$ {{ data.price }}·{{ data.title }}
+          </option>
         </select>
         <div class="invalid-feedback">請選擇一個贊助方案</div>
       </div>
