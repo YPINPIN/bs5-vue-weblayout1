@@ -15,3 +15,11 @@ const tooltipTriggerList = document.querySelectorAll(
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
+
+// https://github.com/twbs/bootstrap/issues/41005#issuecomment-2585390544
+// fix modals aria-hidden attribute error
+window.addEventListener('hide.bs.modal', () => {
+  if (document.activeElement instanceof HTMLElement) {
+    document.activeElement.blur();
+  }
+});
