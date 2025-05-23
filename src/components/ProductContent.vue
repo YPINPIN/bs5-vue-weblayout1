@@ -6,7 +6,8 @@ import ProductComment from './ProductComment.vue';
 import ProductStore from './ProductStore.vue';
 import ProductPlan from './ProductPlan.vue';
 import ProductForm from './ProductForm.vue';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
+import { useWindowSize } from '@vueuse/core';
 
 const tabData = [
   {
@@ -34,6 +35,9 @@ const tabData = [
 // 獲取 tab 及 content 的 DOM 元素
 const tabs = ref(null);
 const contents = ref(null);
+// 根據視窗大小決定表單顯示位置
+const { width } = useWindowSize();
+const isLg = computed(() => width.value >= 992);
 
 onMounted(() => {
   // 控制切換 tab 時，滾動到最上方
@@ -97,7 +101,7 @@ onMounted(() => {
               <component :is="tab.component"></component>
             </div>
           </div>
-          <div class="d-none d-lg-block">
+          <div v-if="isLg" class="d-none d-lg-block">
             <ProductForm />
           </div>
         </div>
@@ -107,7 +111,7 @@ onMounted(() => {
             <ProductPlan />
           </div>
         </div>
-        <div class="col-12 d-lg-none">
+        <div v-if="!isLg" class="col-12 d-lg-none">
           <ProductForm />
         </div>
       </div>
