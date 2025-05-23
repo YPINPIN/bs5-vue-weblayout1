@@ -8,7 +8,7 @@ import ProductPlan from './ProductPlan.vue';
 import ProductForm from './ProductForm.vue';
 import dayjs from 'dayjs';
 import { ref, onMounted, computed, provide } from 'vue';
-import { useWindowSize } from '@vueuse/core';
+import { useWindowSize, useWindowScroll } from '@vueuse/core';
 
 const tabData = [
   {
@@ -109,10 +109,38 @@ onMounted(() => {
     });
   });
 });
+
+// mobile btn 顯示控制
+// 當前滾動位置
+const { y } = useWindowScroll();
+// 開啟位置元素
+const startItem = ref(null);
+// 關閉位置元素
+const endItem = ref(null);
+// 開啟 btn 時的滾動位置
+const start = computed(() => {
+  if (startItem.value) {
+    const rect = startItem.value.getBoundingClientRect();
+    return rect.top + y.value;
+  }
+  return 0;
+});
+// 關閉 btn 時的滾動位置，此處設置為專案選項的中間位置
+const end = computed(() => {
+  if (endItem.value) {
+    const rect = endItem.value.getBoundingClientRect();
+    return rect.bottom + y.value - (rect.bottom - rect.top) / 2;
+  }
+  return 0;
+});
+// 介於指定區域中才顯示 mobile btn
+const showMobileBtn = computed(
+  () => y.value > start.value && y.value < end.value
+);
 </script>
 
 <template>
-  <section class="product-content">
+  <section class="product-content" ref="startItem">
     <div class="tab-wrapper bg-white sticky-top">
       <div class="container-md gx-0 gx-sm-4">
         <ul
@@ -169,7 +197,7 @@ onMounted(() => {
             />
           </div>
         </div>
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4" ref="endItem">
           <div class="right-side">
             <ProductStore />
             <ProductPlan :plan-data="planData" />
@@ -187,11 +215,26 @@ onMounted(() => {
         </div>
       </div>
     </div>
+
+    <!-- mobile btn -->
+    <a
+      v-show="showMobileBtn"
+      href="#product-form"
+      class="bottom-link sticky-bottom d-md-none btn btn-primary w-100 p-0 rounded-0 text-center text-dark fw-bold c-fs-16"
+    >
+      贊助專案
+    </a>
   </section>
 </template>
 
 <style lang="scss" scoped>
 .tab-wrapper {
   border: 1px solid #e8e8db;
+}
+.bottom-link {
+  height: g-fn.rem(44px);
+  line-height: g-fn.rem(44px);
+  box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.1);
+  letter-spacing: g-fn.rem(1.6px);
 }
 </style>
