@@ -1,29 +1,9 @@
 # bs5-vue-weblayout1
 
-This template should help get you started developing with Vue 3 in Vite.
+根據 [六角學院 - Bootstrap 5 新手教學實戰營](https://www.youtube.com/playlist?list=PLYrA-SsMvTPOX9oF6ld9RGwWlo7PceI_P) 教學系列影片，使用 Vue 3 搭配 Bootstrap 5 (部分樣式客製化) 進行實作的切版練習。
 
-## Recommended IDE Setup
+- [設計稿](https://hexschool.github.io/boootstrap5WebLayout/)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [格線系統參考](https://drive.google.com/file/d/1mFN6FTRijd2tT2gfFqK4Yxw9LRKWOl86/view)
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- 額外使用 [Day.js](https://day.js.org/)、[VueUse](https://vueuse.org/) 處理部分樣式顯示。
