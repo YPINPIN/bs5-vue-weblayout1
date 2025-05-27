@@ -25,7 +25,9 @@ const formatDate = (date) => {
       :alt="`process-picture-${picture}`"
     />
     <div class="p-3 pb-2 p-sm-3 d-flex flex-column">
-      <div class="fw-bold c-fs-16 c-text-dark2 process-title">{{ title }}</div>
+      <h3 class="fw-bold c-fs-16 c-text-dark2 lh-base mb-0 process-title">
+        {{ title }}
+      </h3>
       <span class="c-fn-num c-fs-14 text-secondary mb-2 process-date">{{
         formatDate(date)
       }}</span>

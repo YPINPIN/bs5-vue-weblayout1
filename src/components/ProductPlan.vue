@@ -10,7 +10,9 @@ const { planData } = defineProps(['planData']);
     >
       選擇一個方案來支持
     </div>
-    <PlanItem v-for="data in planData" :key="data.id" v-bind="data" />
+    <ul class="list-unstyled mb-0">
+      <PlanItem v-for="data in planData" :key="data.id" v-bind="data" />
+    </ul>
   </div>
 </template>
 

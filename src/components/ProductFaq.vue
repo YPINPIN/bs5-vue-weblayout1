@@ -43,14 +43,14 @@ const faqData = [
 
 <template>
   <div class="py-3 py-lg-4">
-    <div class="row my-3 my-lg-4">
-      <div
+    <ul class="list-unstyled row my-3 my-lg-4">
+      <li
         v-for="(faq, index) in faqData"
         :key="faq.id"
         :class="['col-12', { 'mb-3': index != faqData.length - 1 }]"
       >
         <FaqItem v-bind="faq" :is-show="index === 0" />
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>

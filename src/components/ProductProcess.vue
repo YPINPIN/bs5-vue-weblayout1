@@ -31,14 +31,14 @@ const processData = [
 
 <template>
   <div class="py-3 py-lg-4">
-    <div class="row my-3 my-lg-4">
-      <div
+    <ul class="list-unstyled row my-3 my-lg-4">
+      <li
         v-for="(data, index) in processData"
         :key="data.id"
         :class="['col-12', { 'mb-3': index != processData.length - 1 }]"
       >
         <ProcessItem v-bind="data" />
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </template>

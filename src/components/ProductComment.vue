@@ -48,14 +48,15 @@ const commentData = [
           >！
         </div>
       </div>
-
-      <div
-        v-for="(data, index) in commentData"
-        :key="data.id"
-        :class="['col-12', { 'mb-3': index != commentData.length - 1 }]"
-      >
-        <CommentItem v-bind="data" />
-      </div>
+      <ul class="list-unstyled mb-0 col-12">
+        <li
+          v-for="(data, index) in commentData"
+          :key="data.id"
+          :class="[{ 'mb-3': index != commentData.length - 1 }]"
+        >
+          <CommentItem v-bind="data" />
+        </li>
+      </ul>
     </div>
   </div>
 </template>

@@ -17,7 +17,7 @@ const infoData = [
 ];
 </script>
 <template>
-  <div class="py-3 py-lg-4">
+  <ul class="list-unstyled mb-0 py-3 py-lg-4">
     <InfoItem v-for="data in infoData" :key="data.title" v-bind="data" />
-  </div>
+  </ul>
 </template>

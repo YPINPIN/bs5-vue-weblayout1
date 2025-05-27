@@ -10,7 +10,7 @@ const { id, title, description, isShow } = defineProps({
 <template>
   <div class="accordion">
     <div class="accordion-item">
-      <h2 class="accordion-header">
+      <div class="accordion-header">
         <button
           :class="['accordion-button', { collapsed: !isShow }]"
           type="button"
@@ -22,16 +22,18 @@ const { id, title, description, isShow } = defineProps({
           >
             Q{{ id }}
           </span>
-          <span class="c-fs-16 c-fs-lg-14 faq-title">{{ title }}</span>
+          <h3 class="c-fs-16 c-fs-lg-14 lh-base mb-0 faq-title">{{ title }}</h3>
         </button>
-      </h2>
+      </div>
       <div
         :id="`faq-collapse-${id}`"
         :class="['accordion-collapse', 'collapse', { show: isShow }]"
       >
-        <div class="accordion-body c-fs-16 c-fs-lg-14 text-secondary faq-desc">
+        <p
+          class="accordion-body c-fs-16 c-fs-lg-14 text-secondary mb-0 faq-desc"
+        >
           {{ description }}
-        </div>
+        </p>
       </div>
     </div>
   </div>

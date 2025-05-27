@@ -71,7 +71,7 @@ setCountdown();
 </script>
 
 <template>
-  <div class="card bg-white mb-3">
+  <li class="card bg-white mb-3">
     <img :src="getImageUrl(picture)" class="card-img-top" :alt="`plan-${id}`" />
 
     <div class="card-body pt-0">
@@ -81,11 +81,11 @@ setCountdown();
         <span class="limit-text">限時優惠</span>
         <span class="limit-time c-fn-num">{{ limitTimeStr }}</span>
       </div>
-      <h5
+      <h2
         class="card-title mt-2 mb-1 c-text-dark2 c-fs-18 lh-base fw-bold plan-title"
       >
         {{ title }}
-      </h5>
+      </h2>
       <div class="fw-bold c-fn-num c-fs-24 c-text-dark2 plan-price">
         NT$ {{ price }}
       </div>
@@ -108,7 +108,7 @@ setCountdown();
         >贊助此專案</a
       >
     </div>
-  </div>
+  </li>
 </template>
 
 <style lang="scss" scoped>

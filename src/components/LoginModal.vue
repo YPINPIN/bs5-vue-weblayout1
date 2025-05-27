@@ -5,7 +5,7 @@
         class="modal-content border-0 border-top border-primary border-4 rounded-top-1 rounded-bottom-3"
       >
         <div class="modal-header">
-          <h1 class="modal-title c-fs-24 fw-bold">登入</h1>
+          <div class="modal-title h1 c-fs-24 fw-bold">登入</div>
           <button
             type="button"
             class="btn-close p-3"

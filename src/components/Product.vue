@@ -28,11 +28,11 @@ const iconData = {
     <div class="container-md">
       <div>
         <span class="badge bg-secondary">魔法科技</span>
-        <h2
+        <h1
           class="fw-bold lh-base c-fs-24 c-fs-md-32 mt-2 mt-md-1 mb-3 mb-md-4 product-title"
         >
           拍出會動的照片｜LivePhotos 魔法拍立得
-        </h2>
+        </h1>
         <div class="row">
           <div class="col-12 col-lg-7">
             <img
@@ -71,11 +71,11 @@ const iconData = {
                 </div>
               </div>
             </div>
-            <div
-              class="icon-wrapper mt-1 mt-lg-2 d-flex justify-content-between justify-content-lg-start align-items-center"
+            <ul
+              class="icon-wrapper list-unstyled mb-0 mt-1 mt-lg-2 d-none d-lg-flex justify-content-start align-items-center"
             >
               <template v-for="{ num, title } in iconData" :key="num">
-                <div
+                <li
                   class="icon-block d-none d-lg-flex justify-content-lg-between align-items-lg-center"
                 >
                   <IconGood
@@ -86,17 +86,23 @@ const iconData = {
                     data-bs-offset="0,11"
                     class="me-2 me-md-3 me-lg-0"
                   />
-                </div>
-                <div
+                </li>
+              </template>
+            </ul>
+            <ul
+              class="icon-wrapper list-unstyled mb-0 mt-1 mt-lg-2 d-flex d-lg-none justify-content-between align-items-center"
+            >
+              <template v-for="{ num, title } in iconData" :key="num">
+                <li
                   class="icon-block d-lg-none d-flex justify-content-between align-items-center"
                 >
                   <IconGood :num="num" class="me-2 me-md-3 me-lg-0" />
                   <span class="c-fs-12 c-fs-md-16 text-dark d-lg-none">{{
                     title
                   }}</span>
-                </div>
+                </li>
               </template>
-            </div>
+            </ul>
             <div
               class="bg-white text-dark border-start border-3 border-primary rounded-start-1 rounded-end-3 d-flex flex-column mt-3 px-3 c-fs-14 c-fs-md-16 product-tip"
             >
